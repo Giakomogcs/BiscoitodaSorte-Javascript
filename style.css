@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+
+body{
+    background: linear-gradient(287.56deg, #3b0d8a 0%, #64598e 100%);
+    font-size: 1.6rem;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+body,button,input{
+    font-family: 'DM Sans', sans-serif;
+}
+
+button{
+    
+    background: none;
+    color: white;
+    font-weight: bold;
+    border-radius: .4rem;  
+    cursor: pointer;
+    opacity: 0.7;
+    margin-bottom: 4.8rem;
+
+    transition: background .3s;
+}
+
+.screen1 button:hover{
+    opacity: 1;
+    scale: 1.1;
+ 
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+
+
+
+body main{
+
+    display: flex;
+    flex-direction: column;
+    
+    background: rgba(255, 255, 255, 0.734);
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+    
+    border-radius: 0.5rem;
+    /*padding: 4.8rem 6.4rem 6.4rem;*/
+    
+    width: 42.8rem;
+    margin-top: -12rem;
+    
+    text-align: center;
+
+}
+
+
+/*screen1*/
+h1,p{
+    color: #34355B;
+}
+
+h1{
+
+    width: 29.3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    
+    margin: 4.8rem auto 1.4rem;
+}
+
+p{
+    font-size: 1.6rem;
+    line-height: 150%;
+    opacity: 0.8;
+}
+
+form{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    border: none;
+}
+
+input{
+    background: #DCE2E9;
+    width: 5rem;
+    border-radius: .4rem 0rem 0rem .4rem;
+}
+
+
+/*Screen2*/
+.screen2{
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    font-family: 'Dancing Script', cursive;
+    width: 29.3rem;
+    
+    padding: 1rem;
+    background: #f3f1ea;
+    box-shadow: .2rem .2rem .2rem rgba(85, 85, 85, 0.5);
+    border-radius: 5px;
+    
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    
+}
+
+.sizeh2{
+    animation: phaseLuck 1s .5s backwards ;
+}
+
+.screen2 img{
+    width: 29.3rem;
+    opacity: 1;
+}
+
+.screen2 form{
+    margin-top: 0;
+}
+
+.screen2 button{
+    border-radius: .4rem;
+    background: #3b0d8a;
+    padding: 1.6rem;
+    width: 174px;
+}
+
+.screen2 button:hover{
+    opacity: 1;
+    scale: 1.1;
+}
+
+
+@keyframes phaseLuck {
+
+    0%{
+        opacity: 0;
+        transform: translateY(15rem);
+        width: 0;
+        height: 0;
+        color: transparent;  
+        font-size: 0;     
+    }
+
+    20%{
+        opacity: 0.2;
+        width: 0;
+        height: 0;
+        color: transparent;       
+    }
+
+    80%{
+        height: 5rem;
+        color: transparent; 
+    }
+
+    90%{
+        opacity: .7;
+        height: auto;
+        color: #34355B; 
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+        width: 29.3rem;
+    }
+}
+
+@keyframes shake {
+  0% { transform: translate(.1rem, .1rem) rotate(0deg); }
+  10% { transform: translate(-.1rem, -.2rem) rotate(-1deg); }
+  20% { transform: translate(-.3rem, 0rem) rotate(1deg); }
+  30% { transform: translate(.3rem, .2rem) rotate(0deg); }
+  40% { transform: translate(.1rem, -.1rem) rotate(1deg); }
+  50% { transform: translate(-.1rem, .2rem) rotate(-1deg); }
+  60% { transform: translate(.3rem, .1rem) rotate(0deg); }
+  70% { transform: translate(.3rem, .1rem) rotate(-1deg); }
+  80% { transform: translate(-.1rem, -.1rem) rotate(1deg); }
+  90% { transform: translate(.1rem, .2rem) rotate(0deg); }
+  100% { transform: translate(.1rem, -.2rem) rotate(-1deg); }
+}
+
+.hide{
+    display: none;
+}
+
